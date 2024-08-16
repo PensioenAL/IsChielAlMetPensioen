@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <title>Is Chiel al met pensioen?</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="headline">Aftellen tot Chiels pensioen!</h1>
+            <div id="countdown">
+              <ul>
+                <li><span id="jaar"></span>Jaar</li>
+                <li><span id="dagen"></span>Dagen</li>
+                <li><span id="uren"></span>Uren</li>
+                <li><span id="minuten"></span>Minuten</li>
+                <li><span id="seconden"></span>Seconden</li>
+              </ul>
+            </div>
+            <div  id="antwoordbox">
+                <h2 id="isPensioen" class="isPensioenFalse">Helaas niet Chiel😔, wel bijna een dag dichter bij pensioen!</h2>
+            </div>
+          </div>
+    </body>
+</html>
