@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start the animation and repeat every 30 seconds
     flyAcrossScreen();
-    setInterval(flyAcrossScreen, 30000); // Repeat every 30 seconds
+    setInterval(flyAcrossScreen, 5000); // Repeat every 30 seconds
 
     // Add click event listener to play a random sound
     flyingImage.addEventListener('click', playSound);
