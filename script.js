@@ -49,3 +49,48 @@
         }
     }, 1000); // Set the interval to 1 second
 }());
+
+document.addEventListener("DOMContentLoaded", function () {
+    const flyingImage = document.getElementById("flyingImage");
+
+    // Function to play a random sound from the "Gekkies" folder when the image is clicked
+    function playSound() {
+        const gekkiesFolder = 'Gekkies/';
+        const soundFiles = [
+            '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3',
+            '6.mp3', '7.mp3', '8.mp3', '9.mp3', '10.mp3',
+            '11.mp3', '12.mp3', '13.mp3', '14.mp3', '15.mp3',
+            '16.mp3', '17.mp3', '18.mp3'
+        ];
+
+        // Randomly select one of the sound files
+        const randomIndex = Math.floor(Math.random() * soundFiles.length);
+        const selectedSound = gekkiesFolder + soundFiles[randomIndex];
+
+        // Play the selected sound
+        const audio = new Audio(selectedSound);
+        audio.play();
+    }
+
+    function flyAcrossScreen() {
+        // Set a random vertical position (between 0 and window height - image height)
+        const randomY = Math.floor(Math.random() * (window.innerHeight - flyingImage.height));
+        
+        // Set the initial position
+        flyingImage.style.top = `${randomY}px`;
+        flyingImage.style.left = '-100px'; // Start just off-screen to the left
+        flyingImage.style.transform = 'none'; // Reset any previous transformations
+
+        // Trigger the animation to move across the screen
+        setTimeout(() => {
+            flyingImage.style.left = '100%'; // Move off-screen to the right
+        }, 100); // Small delay to ensure the initial position is applied
+    }
+
+    // Start the animation and repeat every 20 seconds
+    flyAcrossScreen();
+    setInterval(flyAcrossScreen, 20000); // Repeat every 20 seconds
+
+    // Add click event listener to play a random sound
+    flyingImage.addEventListener('click', playSound);
+});

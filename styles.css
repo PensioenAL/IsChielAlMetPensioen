@@ -32,6 +32,7 @@
       Cantarell, 
       "Helvetica Neue", 
       sans-serif;
+      overflow-x: hidden;
   }
   
   .container {
@@ -91,4 +92,12 @@
 }
 .isPensioenFalse{
     color: red;
+}
+#flyingImage {
+  position: absolute;
+  top: 0; /* Start at the top, will be overridden by JS */
+  left: -100px; /* Start off-screen to the left */
+  width: 100px; /* Adjust size as needed */
+  z-index: 100; /* Ensure it appears over other content */
+  transition: transform 5s linear; /* Animation duration */
 }
