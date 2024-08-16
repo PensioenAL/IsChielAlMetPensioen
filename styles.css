@@ -18,7 +18,7 @@
   body {
     align-items: center;
     background-color: #ffd54f;
-    background-image: url('../images/ChielBGpng.jpg'); /* Path to your image */
+    background-image: url('ChielBGpng.jpg'); /* Path to your image */
     background-size: cover; /* Ensure the image covers the entire background */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating the image */
