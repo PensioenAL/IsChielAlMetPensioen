@@ -76,14 +76,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set a random vertical position (between 0 and window height - image height)
         const randomY = Math.floor(Math.random() * (window.innerHeight - flyingImage.height));
         
-        // Set the initial position
-        flyingImage.style.top = `${randomY}px`;
+        // Reset position to just off-screen to the left
+        flyingImage.style.transition = 'none'; // Disable transition to reset position instantly
         flyingImage.style.left = '-100px'; // Start just off-screen to the left
+        flyingImage.style.top = `${randomY}px`;
 
-        // Trigger the animation to move across the screen
+        // Trigger reflow and then start the transition to move across the screen
         requestAnimationFrame(() => {
             flyingImage.style.transition = 'left 5s linear'; // Apply transition
-            flyingImage.style.left = '100%'; // Move off-screen to the right
+            requestAnimationFrame(() => {
+                flyingImage.style.left = '100%'; // Move off-screen to the right
+            });
         });
     }
 
