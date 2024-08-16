@@ -43,7 +43,7 @@
             isPensioenElement.classList.add("isPensioenTrue");
         } else {
             // If not zero, show the countdown message
-            isPensioenElement.innerText = "Helaas niet Chiel😔, wel bijna een dag dichter bij pensioen!";
+            isPensioenElement.innerText = "Helaas niet Chiel😔, wel bijna een dag dichter bij je pensioen!";
             isPensioenElement.classList.remove("isPensioenTrue");
             isPensioenElement.classList.add("isPensioenFalse");
         }
