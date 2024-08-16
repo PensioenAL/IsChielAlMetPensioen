@@ -1,103 +1,106 @@
-
 /* general styling */
 :root {
-    --smaller: .75;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
-    align-items: center;
-    background-color: #ffd54f;
-    background-image: url('ChielBGpng.jpg'); /* Path to your image */
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    display: flex;
-    font-family: -apple-system, 
-      BlinkMacSystemFont, 
-      "Segoe UI", 
-      Roboto, 
-      Oxygen-Sans, 
-      Ubuntu, 
-      Cantarell, 
-      "Helvetica Neue", 
-      sans-serif;
-      overflow-x: hidden;
-  }
-  
-  .container {
-    color: black;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #ffd54f;
+  background-image: url('ChielBGpng.jpg'); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
   h1 {
-    font-weight: normal;
-    letter-spacing: .125rem;
-    text-transform: uppercase;
+    font-size: calc(1.5rem * var(--smaller));
   }
   
   li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
+    font-size: calc(1.125rem * var(--smaller));
   }
   
   li span {
-    display: block;
-    font-size: 4.5rem;
+    font-size: calc(3.375rem * var(--smaller));
   }
-  
-  .emoji {
-    display: none;
-    padding: 1rem;
-  }
-  
-  .emoji span {
-    font-size: 4rem;
-    padding: 0 .5rem;
-  }
-  
-  @media all and (max-width: 768px) {
-    h1 {
-      font-size: calc(1.5rem * var(--smaller));
-    }
-    
-    li {
-      font-size: calc(1.125rem * var(--smaller));
-    }
-    
-    li span {
-      font-size: calc(3.375rem * var(--smaller));
-    }
-  }
+}
+
 #antwoordbox{
-    padding-top: 100px;
+  padding-top: 100px;
 }
+
 .isPensioenTrue{
-    color: green;
+  color: green;
 }
+
 .isPensioenFalse{
-    color: red;
+  color: red;
 }
+
 #flyingImage {
-  position: absolute;
-  top: 0; /* Start at the top, will be overridden by JS */
-  left: -100px; /* Start off-screen to the left */
-  width: 100px; /* Adjust size as needed */
-  z-index: 100; /* Ensure it appears over other content */
-  transition: transform 5s linear; /* Animation duration */
+position: absolute;
+top: 0; /* Start at the top, will be overridden by JS */
+left: -100px; /* Start off-screen to the left */
+width: 100px; /* Adjust size as needed */
+z-index: 100; /* Ensure it appears over other content */
+/*transition: transform 5s linear;  Animation duration */
 }

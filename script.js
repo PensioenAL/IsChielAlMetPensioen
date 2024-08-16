@@ -79,17 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set the initial position
         flyingImage.style.top = `${randomY}px`;
         flyingImage.style.left = '-100px'; // Start just off-screen to the left
-        flyingImage.style.transform = 'none'; // Reset any previous transformations
 
         // Trigger the animation to move across the screen
-        setTimeout(() => {
+        requestAnimationFrame(() => {
+            flyingImage.style.transition = 'left 5s linear'; // Apply transition
             flyingImage.style.left = '100%'; // Move off-screen to the right
-        }, 100); // Small delay to ensure the initial position is applied
+        });
     }
 
-    // Start the animation and repeat every 20 seconds
+    // Start the animation and repeat every 30 seconds
     flyAcrossScreen();
-    setInterval(flyAcrossScreen, 20000); // Repeat every 20 seconds
+    setInterval(flyAcrossScreen, 30000); // Repeat every 30 seconds
 
     // Add click event listener to play a random sound
     flyingImage.addEventListener('click', playSound);
